@@ -1,4 +1,4 @@
-  =>  Template Name    : Startup - Startup Website Template
+  =>  Template Name    : Washingtone - Full Stack Developer
 
   =>  Template Link    : https://htmlcodex.com/startup-website-template
 
