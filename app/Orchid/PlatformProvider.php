@@ -9,6 +9,8 @@ use Orchid\Platform\ItemPermission;
 use Orchid\Platform\OrchidServiceProvider;
 use Orchid\Screen\Actions\Menu;
 use Orchid\Support\Color;
+use App\Orchid\Screens\PagesScreen;
+
 
 class PlatformProvider extends OrchidServiceProvider
 {
@@ -34,6 +36,17 @@ class PlatformProvider extends OrchidServiceProvider
     public function menu(): array
     {
         return [
+            Menu::make('Pages')
+                ->icon('bs.card-text')
+                //->route('platform.pages')
+                ->title(''),
+
+            Menu::make('Posts')
+                ->icon('bs.card-text')
+                //->route('platform.posts')
+                ->title(''),
+
+
             Menu::make('Get Started')
                 ->icon('bs.book')
                 ->title('Navigation')
@@ -88,7 +101,7 @@ class PlatformProvider extends OrchidServiceProvider
                 ->icon('bs.box-arrow-up-right')
                 ->url('https://github.com/orchidsoftware/platform/blob/master/CHANGELOG.md')
                 ->target('_blank')
-                ->badge(fn () => Dashboard::version(), Color::DARK),
+                ->badge(fn () => Dashboard::version(), Color::DARK),        
         ];
     }
 
@@ -105,4 +118,5 @@ class PlatformProvider extends OrchidServiceProvider
                 ->addPermission('platform.systems.users', __('Users')),
         ];
     }
+
 }
