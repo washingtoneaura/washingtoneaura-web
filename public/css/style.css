@@ -277,9 +277,9 @@ h6,
     width: 6px;
     height: 5px;
     bottom: 0px;
-    background: #FFFFFF;
+    /*background: #FFFFFF;
     -webkit-animation: section-title-run 5s infinite linear;
-    animation: section-title-run 5s infinite linear;
+    animation: section-title-run 5s infinite linear;*/
 }
 
 .section-title.section-title-sm::after {
@@ -288,13 +288,13 @@ h6,
 }
 
 .section-title.text-center::after {
-    -webkit-animation: section-title-run-center 5s infinite linear;
-    animation: section-title-run-center 5s infinite linear;
+    /*-webkit-animation: section-title-run-center 5s infinite linear;
+    animation: section-title-run-center 5s infinite linear;*/
 }
 
 .section-title.section-title-sm::after {
-    -webkit-animation: section-title-run-sm 5s infinite linear;
-    animation: section-title-run-sm 5s infinite linear;
+    /*-webkit-animation: section-title-run-sm 5s infinite linear;
+    animation: section-title-run-sm 5s infinite linear;*/
 }
 
 @-webkit-keyframes section-title-run {
