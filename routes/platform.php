@@ -2,6 +2,7 @@
 
 declare(strict_types=1);
 
+use App\Orchid\Layouts\Pages as LayoutsPages;
 use App\Orchid\Screens\Examples\ExampleActionsScreen;
 use App\Orchid\Screens\Examples\ExampleCardsScreen;
 use App\Orchid\Screens\Examples\ExampleChartsScreen;
@@ -19,7 +20,12 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
-use App\Orchid\Screens\PagesScreen;
+use App\Orchid\Screens\Pages\Pages;
+use App\Orchid\Screens\Posts;
+use App\Orchid\Screens\Team;
+use App\Orchid\Screens\Pages\ViewsListScreen;
+
+
 
 
 /*
@@ -106,11 +112,19 @@ Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.exam
 //Route::screen('idea', Idea::class, 'platform.screens.idea');
 
 // Platform > Pages
-Route::screen('pages', PagesScreen::class)
+/*Route::screen('pages', Pages::class)
     ->name('platform.pages')
     ->breadcrumbs(fn (Trail $trail) => $trail
         ->parent('platform.index')
         ->push(__('Pages'), route('platform.pages')));
 
+*/
+//Pages
+Route::screen('/pages', Pages::class)->name('platform.pages');
 
-        
+//Posts
+Route::screen('/posts', Posts::class)->name('platform.posts');
+
+//Team
+Route::screen('/team', Team::class)->name('platform.team');
+

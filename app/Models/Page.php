@@ -2,14 +2,12 @@
 
 namespace App\Models;
 
-use Orchid\Platform\Models\Page as OrchidPage;
-use Orchid\Screen\AsSource;
-use Orchid\Screen\Fields\Text;
-use Orchid\Screen\Fields\TextArea;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Page extends OrchidPage
+class Page extends Model
 {
-    use AsSource;
+    use HasFactory;
 
     /**
      * The attributes that are mass assignable.
@@ -42,31 +40,4 @@ class Page extends OrchidPage
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
     ];
-
-    /**
-     * Define the fields for the model.
-     *
-     * @return array
-     */
-    public function fields(): array
-    {
-        return [
-            Text::make('title')
-                ->required()
-                ->title('Title')
-                ->placeholder('Enter the title here'),
-
-            Text::make('slug')
-                ->required()
-                ->title('Slug')
-                ->placeholder('Enter the slug here')
-                ->help('The slug is used in the URL for this page.'),
-
-            TextArea::make('content')
-                ->required()
-                ->title('Content')
-                ->placeholder('Enter the content here')
-                ->rows(10),
-        ];
-    }
 }

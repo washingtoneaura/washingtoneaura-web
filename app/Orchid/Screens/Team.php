@@ -3,8 +3,10 @@
 namespace App\Orchid\Screens;
 
 use Orchid\Screen\Screen;
+use Illuminate\Http\Request;
 
-class PostsScreen extends Screen
+
+class Team extends Screen
 {
     /**
      * Fetch data to be displayed on the screen.
@@ -23,7 +25,7 @@ class PostsScreen extends Screen
      */
     public function name(): ?string
     {
-        return 'PostsScreen';
+        return 'Team';
     }
 
     /**
