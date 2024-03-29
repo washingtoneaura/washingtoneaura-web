@@ -2,6 +2,7 @@
 
 namespace App\Orchid\Screens\Pages;
 
+
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 use App\Orchid\Layouts\PagesListLayout;
@@ -10,6 +11,7 @@ use Orchid\Screen\TD;
 use Illuminate\Support\Str;
 use Orchid\Screen\Components\Cells\Currency;
 use Orchid\Screen\Components\Cells\DateTimeSplit;
+
 
 
 
@@ -54,6 +56,8 @@ class PagesScreen extends Screen
 
         return [
             'views-table' => $viewNames,
+
+
             'data' => [
                 new Repository(['name' => 'Lorem ipsum', 'price' => 10.24, 'created_at' => '2020-01-01']),
             ],

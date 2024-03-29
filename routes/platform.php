@@ -24,7 +24,8 @@ use App\Orchid\Screens\Pages;
 use App\Orchid\Screens\Posts;
 use App\Orchid\Screens\Team;
 use App\Orchid\Screens\Pages\PagesScreen;
-use App\Orchid\Screens\Pages\AuraScreen;
+use App\Orchid\Screens\Pages\PagesListScreen;
+use App\Orchid\Screens\Pages\PageEditScreen;
 
 
 /*
@@ -125,9 +126,33 @@ Route::screen('/posts', Posts::class)->name('platform.posts');
 Route::screen('/team', Team::class)->name('platform.team');
 
 
-Route::screen('pages', PagesScreen::class)
-    ->name('platform.pages')
+Route::screen('blade-pages', PagesScreen::class)
+    ->name('platform.blade-pages')
     ->breadcrumbs(fn (Trail $trail) => $trail
         ->parent('platform.index')
         ->push('Pages Screen'));
+
+
+// Platform > Pages ----> from db
+Route::screen('pages', PagesListScreen::class)
+    ->name('platform.pages')
+    ->breadcrumbs(function (Trail $trail) {
+        return $trail
+            ->parent('platform.index')
+            ->push(__('Pages'), route('platform.pages'));
+    });
+
+// Platform > System > Pages > Page
+Route::screen('pages/{page}/edit', PageEditScreen::class)
+    ->name('platform.pages.edit')
+    ->breadcrumbs(fn (Trail $trail, $page) => $trail
+        ->parent('platform.pages')
+        ->push($page->title, route('platform.pages.edit', $page)));
+
+// Platform > System > Pages > Create
+Route::screen('pages/create', PageEditScreen::class)
+    ->name('platform.pages.create')
+    ->breadcrumbs(fn (Trail $trail) => $trail
+        ->parent('platform.pages')
+        ->push(__('Create'), route('platform.pages.create')));
 
