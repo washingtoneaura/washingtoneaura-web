@@ -4,6 +4,8 @@ namespace App\Orchid\Layouts;
 
 use Orchid\Screen\Layouts\Table;
 use Orchid\Screen\TD;
+use Orchid\Support\Facades\Layout;
+
 
 class PagesListLayout extends Table
 {
@@ -25,9 +27,7 @@ class PagesListLayout extends Table
     protected function columns(): iterable
     {
         return [
-            TD::make('view_name')
-                ->sort()
-                ->filter(TD::FILTER_TEXT),
+                TD::make('view_name','View Name'),
         ];
     }
 }

@@ -131,8 +131,3 @@ Route::screen('pages', PagesScreen::class)
         ->parent('platform.index')
         ->push('Pages Screen'));
 
-Route::screen('aura', AuraScreen::class)
-->name('platform.aura')
-->breadcrumbs(fn (Trail $trail) => $trail
-    ->parent('platform.index')
-    ->push('Aura Screen'));
