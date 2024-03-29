@@ -20,12 +20,11 @@ use App\Orchid\Screens\User\UserListScreen;
 use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
-use App\Orchid\Screens\Pages\Pages;
+use App\Orchid\Screens\Pages;
 use App\Orchid\Screens\Posts;
 use App\Orchid\Screens\Team;
-use App\Orchid\Screens\Pages\ViewsListScreen;
-
-
+use App\Orchid\Screens\Pages\PagesScreen;
+use App\Orchid\Screens\Pages\AuraScreen;
 
 
 /*
@@ -119,12 +118,21 @@ Route::screen('/examples/cards', ExampleCardsScreen::class)->name('platform.exam
         ->push(__('Pages'), route('platform.pages')));
 
 */
-//Pages
-Route::screen('/pages', Pages::class)->name('platform.pages');
-
 //Posts
 Route::screen('/posts', Posts::class)->name('platform.posts');
 
 //Team
 Route::screen('/team', Team::class)->name('platform.team');
 
+
+Route::screen('pages', PagesScreen::class)
+    ->name('platform.pages')
+    ->breadcrumbs(fn (Trail $trail) => $trail
+        ->parent('platform.index')
+        ->push('Pages Screen'));
+
+Route::screen('aura', AuraScreen::class)
+->name('platform.aura')
+->breadcrumbs(fn (Trail $trail) => $trail
+    ->parent('platform.index')
+    ->push('Aura Screen'));

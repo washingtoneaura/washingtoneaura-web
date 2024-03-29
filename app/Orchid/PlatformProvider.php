@@ -36,6 +36,11 @@ class PlatformProvider extends OrchidServiceProvider
     public function menu(): array
     {
         return [
+            Menu::make('Aura')
+                ->icon('bs.card-text')
+                ->title('Washingtone Aura')
+                ->route('platform.aura'),
+
             Menu::make('Views')
                 ->icon('bs.book')
                 ->title('Pages')
