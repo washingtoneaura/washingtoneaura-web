@@ -18,6 +18,12 @@ Route::get('/services', function () {
     return view('services');
 })->name('services');
 
+// Services page route
+Route::get('/projects', function () {
+    return view('projects');
+})->name('projects');
+
+
 // Blog routes
 Route::get('/blog', function () {
     return view('blog');

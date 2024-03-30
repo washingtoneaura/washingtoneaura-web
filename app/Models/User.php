@@ -66,4 +66,15 @@ class User extends Authenticatable
         'updated_at',
         'created_at',
     ];
+
+        /**
+     * Determine if the user is an admin.
+     *
+     * @return bool
+     */
+    public function isAdmin()
+    {
+        // Assuming you have a 'role' column in your users table and 'admin' is one of the roles
+        return $this->role === 'admin';
+    }
 }

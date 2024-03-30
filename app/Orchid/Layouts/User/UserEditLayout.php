@@ -30,6 +30,13 @@ class UserEditLayout extends Rows
                 ->required()
                 ->title(__('Email'))
                 ->placeholder(__('Email')),
+               
+            //my custom roles    
+            Input::make('user.role')
+            ->type('text')
+            //->required()
+            ->title(__('Admin/Role'))
+            ->placeholder(__('admin')),
         ];
     }
 }

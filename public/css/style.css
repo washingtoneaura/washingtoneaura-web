@@ -323,6 +323,11 @@ h6,
     0% {left: 0; } 50% { left : 85px; } 100% { left: 0; }
 }
 
+/*** Facts & Quote ***/
+.facts2,
+.quote2 {
+    background: rgba(144, 175, 241, 0.6);
+}
 
 /*** Service ***/
 .service-item {

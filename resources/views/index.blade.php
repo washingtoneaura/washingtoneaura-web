@@ -23,12 +23,15 @@
     <!-- Libraries Stylesheet -->
     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
     <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -77,6 +80,7 @@
                     <a href="{{ route('home') }}" class="nav-item nav-link active">Home</a>
                     <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
                     <a href="{{ route('services') }}" class="nav-item nav-link">Services</a>
+                    <a href="{{ route('projects') }}" class="nav-item nav-link">Projects</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
@@ -92,6 +96,7 @@
                             <a href="{{ route('team') }}" class="dropdown-item">Team Members</a>
                             <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
                             <a href="{{ route('quote') }}" class="dropdown-item">Free Quote</a>
+                            <a href="{{ route('platform.login') }}" class="dropdown-item">Sign In</a>
                         </div>
                     </div>
                     <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>

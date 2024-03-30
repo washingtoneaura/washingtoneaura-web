@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
+
 return array(
 
     /**
@@ -31,14 +33,14 @@ return array(
      * */
     'is_admin' => function(){
 
-       // This is an example code. 
-       // 
-       // if( Auth::user() &&  Auth::user()->isAdmin()){
-       //     return true;
-       // }
-       // return false;
+        // Explicitly type hint the Auth::user() object as an instance of the User model
+        $user = Auth::user();
+        if ($user instanceof \App\Models\User && $user->isAdmin()) {
+            return true;
+        }
+        return false;
         
-        return true;
+        //return true;
     },
     /**
      * 

@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Washingtone - Full Stack Developer</title>
+<meta charset="utf-8">
+    <title>Washingtone - Software Developer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ asset('img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,14 +21,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('lib/lightbox/css/lightbox.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -77,6 +80,8 @@
                     <a href="{{ route('home') }}" class="nav-item nav-link">Home</a>
                     <a href="{{ route('about') }}" class="nav-item nav-link">About</a>
                     <a href="{{ route('services') }}" class="nav-item nav-link">Services</a>
+                    <a href="{{ route('projects') }}" class="nav-item nav-link">Projects</a>
+
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Blog</a>
                         <div class="dropdown-menu m-0">
@@ -92,6 +97,8 @@
                             <a href="{{ route('team') }}" class="dropdown-item">Team Members</a>
                             <a href="{{ route('testimonial') }}" class="dropdown-item active">Testimonial</a>
                             <a href="{{ route('quote') }}" class="dropdown-item">Free Quote</a>
+                            <a href="{{ route('platform.login') }}" class="dropdown-item">Sign In</a>
+
                         </div>
                     </div>
                     <a href="{{ route('contact') }}" class="nav-item nav-link">Contact</a>
