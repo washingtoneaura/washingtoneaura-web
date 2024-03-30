@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PageController;
 
 // Home route
 Route::get('/', function () {
@@ -53,3 +54,8 @@ Route::get('/contact', function () {
 })->name('contact');
 
 Route::get('/pages/{slug}', 'PageController@show')->name('pages.show');
+
+Route::get('/page/{id}', [PageController::class, 'show'])->name('page.preview');
+
+// routes/web.php or routes/api.php
+Route::post('/pages/{page}/preview', [App\Orchid\Screens\Pages\PageEditScreen::class, 'preview'])->name('pages.preview');

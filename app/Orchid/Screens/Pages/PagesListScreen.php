@@ -75,5 +75,10 @@ class PagesListScreen extends Screen
         ];
     }
 
-    // Add methods for editing a page, similar to the saveUser method in the UserListScreen example.
+    public function remove(Request $request): void
+    {
+        Page::findOrFail($request->get('id'))->delete();
+
+        Toast::info(__('Page was removed'));
+    }
 }

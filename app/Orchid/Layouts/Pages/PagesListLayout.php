@@ -61,9 +61,11 @@ class PagesListLayout extends Table
                             ->route('platform.pages.edit', $id)
                             ->icon('bs.pencil'),
 
-                        Link::make('Preview')
-                            //->route('page.preview', $id)
-                            ->icon('eye'),
+                        Button::make('Preview')
+                            //->route('page.preview')
+                            ->icon('eye')
+                            ->route('pages.preview', $id)
+                            ->target('_blank'),
 
                         Button::make(__('Delete'))
                             ->icon('bs.trash3')

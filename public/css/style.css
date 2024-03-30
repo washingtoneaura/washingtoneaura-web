@@ -135,7 +135,10 @@ h6,
     outline: none;
     transition: .5s;
 }
-
+.navbar{
+    background: #082d66;
+    width: 100% !important;
+}
 .sticky-top.navbar-dark .navbar-nav .nav-link {
     padding: 20px 0;
     color: var(--dark);
@@ -185,9 +188,20 @@ h6,
     
     .sticky-top.navbar-dark {
         position: fixed;
-        background: #FFFFFF;
+        background: #091E3E;
     }
 
+    .sticky-top.navbar-dark .navbar-nav .nav-link {
+        font-family: 'Nunito', sans-serif;
+        position: relative;
+        margin-left: 25px;
+        padding: 35px 0;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 600;
+        outline: none;
+        transition: .5s;
+    }
     .navbar-dark .navbar-nav .nav-link::before {
         position: absolute;
         content: "";

@@ -156,3 +156,5 @@ Route::screen('pages/create', PageEditScreen::class)
         ->parent('platform.pages')
         ->push(__('Create'), route('platform.pages.create')));
 
+// routes/web.php or routes/api.php
+Route::post('/pages/{page}/preview', [App\Orchid\Screens\Pages\PageEditScreen::class, 'preview'])->name('pages.preview');

@@ -62,12 +62,26 @@ class PageEditScreen extends Screen
                 ->icon('bs.check-circle')
                 ->method('save'),
 
-            Link::make('Preview')
+            Button::make('Preview')
                 //->route('page.preview')
-                ->icon('eye'),
+                ->icon('eye')
+                ->method('preview')
+                ->rawClick()
+                ->id('previewButton'),
 
             
         ];
+    }
+
+    public function preview(Page $page, Request $request)
+    {
+        // Generate the URL for the page preview
+        //$url = route('page.preview', ['slug' => $page->slug]);
+        $url = route('page.preview', ['id' => $page->id]);
+
+        // Return the URL as a response
+        //return response()->json(['url' => $url]);    
+        return redirect($url);
     }
 
     /**

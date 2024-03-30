@@ -16,9 +16,9 @@
     new WOW().init();
 
 
-    // Sticky Navbar
+    // Sticky Navbar >45
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 45) {
+        if ($(this).scrollTop() > 0) {
             $('.navbar').addClass('sticky-top shadow-sm');
         } else {
             $('.navbar').removeClass('sticky-top shadow-sm');

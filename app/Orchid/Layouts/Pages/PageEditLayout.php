@@ -9,6 +9,7 @@ use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Layouts\Rows;
 use Orchid\Screen\Fields\CheckBox;
 use Orchid\Screen\Fields\Quill;
+use App\Orchid\CustomFields\CKEditorField;
 
 
 class PageEditLayout extends Rows
@@ -32,6 +33,10 @@ class PageEditLayout extends Rows
                 ->title(__('Content'))
                 ->placeholder(__('Enter your content here'))
                 ->toolbar(["text", "color", "header", "list", "format", "media"]),
+            
+              /*CKEditorField::make('page.content')
+                ->title(__('Content'))
+                ->placeholder(__('Enter your content here')),*/
 
             Input::make('page.slug')
                 ->type('text')
