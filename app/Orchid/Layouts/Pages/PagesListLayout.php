@@ -21,7 +21,14 @@ class PagesListLayout extends Table
             TD::make('title', 'Title')
                 ->sort()
                 ->cantHide()
-                ->filter(TD::FILTER_TEXT),
+                ->filter(TD::FILTER_TEXT)
+                ->render(function ($repository) {
+                    $title = $repository->get('title');
+                    $id = $repository->get('id');
+    
+                    return Link::make($title)
+                        ->route('platform.pages.edit', $id);
+                }),
 
             TD::make('slug', 'Slug')
                 ->sort()
@@ -34,35 +41,37 @@ class PagesListLayout extends Table
                 ->filter(TD::FILTER_TEXT),
 
             TD::make('created_at', 'Created')
-                ->align(TD::ALIGN_RIGHT)
-                ->defaultHidden()
+                //->align(TD::ALIGN_RIGHT)
+                ->sort(),
+
+            TD::make('updated_at', 'Last Modified')
+                //->align(TD::ALIGN_RIGHT)
                 ->sort(),
 
             TD::make(__('Actions'))
-            ->align(TD::ALIGN_CENTER)
-            ->width('100px')
-            ->render(function ($repository) {
+                ->align(TD::ALIGN_CENTER)
+                ->width('100px')
+                ->render(function ($repository) {
                 $page = $repository->get('page');
-
-                if ($page === null) {
-                    // Handle the case where $page is null, e.g., by returning an empty DropDown
-                    return DropDown::make();
-                }        
-
+                $id = $repository->get('id');
                 return DropDown::make()
                     ->icon('bs.three-dots-vertical')
                     ->list([
                         Link::make(__('Edit'))
-                            ->route('platform.pages.edit', $page->id) // Ensure this route is correct for your application
+                            ->route('platform.pages.edit', $id)
                             ->icon('bs.pencil'),
+
+                        Link::make('Preview')
+                            //->route('page.preview', $id)
+                            ->icon('eye'),
 
                         Button::make(__('Delete'))
                             ->icon('bs.trash3')
                             ->confirm(__('Once the page is deleted, all of its resources and data will be permanently deleted. Before deleting this page, please download any data or information that you wish to retain.'))
                             ->method('remove', [
-                                'id' => $page->id,
-                            ]),
-                    ]);
+                                'id' => $id,
+                        ]),
+                ]);
             }),
         ];
     }

@@ -27,9 +27,12 @@ class PagesListScreen extends Screen
     // Wrap each page in a Repository instance
     $pagesRepository = $pages->map(function ($page) {
         return new Repository([
+            'id' => $page->id,
             'title' => $page->title,
             'slug' => $page->slug,
             'published' => $page->published,
+            'created_at' => $page->created_at,
+            'updated_at' => $page->updated_at,
             // Add more fields as needed
         ]);
     });

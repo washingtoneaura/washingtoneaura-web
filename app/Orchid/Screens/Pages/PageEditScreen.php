@@ -13,6 +13,7 @@ use Orchid\Screen\Screen;
 use Orchid\Support\Color;
 use Orchid\Support\Facades\Layout;
 use Orchid\Support\Facades\Toast;
+use Orchid\Screen\Actions\Link;
 
 class PageEditScreen extends Screen
 {
@@ -60,6 +61,12 @@ class PageEditScreen extends Screen
             Button::make(__('Save'))
                 ->icon('bs.check-circle')
                 ->method('save'),
+
+            Link::make('Preview')
+                //->route('page.preview')
+                ->icon('eye'),
+
+            
         ];
     }
 
@@ -90,10 +97,11 @@ class PageEditScreen extends Screen
         $request->validate([
             'page.title' => 'required|string|max:255',
             'page.slug' => 'required|string|max:255|unique:pages,slug,' . $page->id,
-            'page.published' => 'nullable|boolean',
+            'page.published' => 'required|boolean',
         ]);
 
-        $page->fill($request->input('page'))->save();
+        $pageData = $request->input('page');      
+        $page->fill($pageData)->save();    
 
         Toast::info(__('Page was saved.'));
 

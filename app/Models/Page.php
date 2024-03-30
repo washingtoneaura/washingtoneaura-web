@@ -18,6 +18,7 @@ class Page extends Model
         'title',
         'slug',
         'content',
+        'published',
     ];
 
     /**

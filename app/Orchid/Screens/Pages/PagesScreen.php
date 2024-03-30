@@ -11,10 +11,7 @@ use Orchid\Screen\TD;
 use Illuminate\Support\Str;
 use Orchid\Screen\Components\Cells\Currency;
 use Orchid\Screen\Components\Cells\DateTimeSplit;
-
-
-
-
+use Orchid\Screen\Actions\Link;
 
 class PagesScreen extends Screen
 {
@@ -79,7 +76,11 @@ class PagesScreen extends Screen
      */
     public function commandBar(): array
     {
-        return [];
+        return [
+            Link::make('Go to Home Page')
+            ->href('/')
+            ->icon('home'),
+        ];
     }
 
     /**

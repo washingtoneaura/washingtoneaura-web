@@ -8,6 +8,7 @@ use Orchid\Screen\Field;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Layouts\Rows;
 use Orchid\Screen\Fields\CheckBox;
+use Orchid\Screen\Fields\Quill;
 
 
 class PageEditLayout extends Rows
@@ -21,11 +22,16 @@ class PageEditLayout extends Rows
     {
         return [
             Input::make('page.title')
-            ->type('text')
-            ->max(255)
-            ->required()
-            ->title(__('Title'))
-            ->placeholder(__('Title')),
+                ->type('text')
+                ->max(255)
+                ->required()
+                ->title(__('Title'))
+                ->placeholder(__('Title')),
+                
+            Quill::make('page.content')
+                ->title(__('Content'))
+                ->placeholder(__('Enter your content here'))
+                ->toolbar(["text", "color", "header", "list", "format", "media"]),
 
             Input::make('page.slug')
                 ->type('text')
@@ -35,10 +41,10 @@ class PageEditLayout extends Rows
                 ->placeholder(__('Slug')),
 
             CheckBox::make('page.published')
+                ->value(true)
+                ->sendTrueOrFalse()
                 ->title(__('Published'))
-                ->placeholder(__('Published')),
-
-
+                ->placeholder(__('Published'))
         ];
     }
 }
