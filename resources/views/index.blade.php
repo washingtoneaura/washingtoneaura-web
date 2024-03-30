@@ -249,6 +249,30 @@
     </div>
     <!-- About End -->
 
+    <!-- Facts Start -->
+    <div class="container-fluid facts2 my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Happy Clients</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Garden Complated</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Dedicated Staff</span>
+                </div>
+                <div class="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                    <h1 class="display-4 text-white" data-toggle="counter-up">1234</h1>
+                    <span class="fs-5 fw-semi-bold text-light">Awards Achieved</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Facts End -->  
 
     <!-- Features Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -518,6 +542,98 @@
     </div>
     <!-- Quote End -->
 
+    <!-- Project Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="section-title bg-white text-center text-primary px-3">Our Projects</h6>
+                <h1 class="display-6 mb-4">Learn More About Our Complete Projects</h1>
+            </div>
+            <div class="owl-carousel project-carousel wow fadeInUp" data-wow-delay="0.1s">
+                <div class="project-item border rounded h-100 p-4" data-dot="01">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-1.jpg" alt="">
+                        <a href="img/project-1.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="02">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-2.jpg" alt="">
+                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="03">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-3.jpg" alt="">
+                        <a href="img/project-2.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="04">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-4.jpg" alt="">
+                        <a href="img/project-4.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="05">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-5.jpg" alt="">
+                        <a href="img/project-5.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="06">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-6.jpg" alt="">
+                        <a href="img/project-6.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="07">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-7.jpg" alt="">
+                        <a href="img/project-7.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="08">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-8.jpg" alt="">
+                        <a href="img/project-8.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="09">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-9.jpg" alt="">
+                        <a href="img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+                <div class="project-item border rounded h-100 p-4" data-dot="10">
+                    <div class="position-relative mb-4">
+                        <img class="img-fluid rounded" src="img/project-10.jpg" alt="">
+                        <a href="img/project-10.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
+                    </div>
+                    <h6>UI / UX Design</h6>
+                    <span>Digital agency website design and development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
 
     <!-- Testimonial Start -->
     <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
@@ -836,6 +952,9 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/counterup/counterup.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
