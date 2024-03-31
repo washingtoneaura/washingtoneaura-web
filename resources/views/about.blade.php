@@ -92,7 +92,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu m-0">
-                            <a href="{{ route('price') }}" class="dropdown-item">Pricing Plan</a>
+                            <a href="{{ route('price') }}" class="dropdown-item">Pricing Plans</a>
                             <a href="{{ route('features') }}" class="dropdown-item">My features</a>
                             <a href="{{ route('team') }}" class="dropdown-item">Team Members</a>
                             <a href="{{ route('testimonial') }}" class="dropdown-item">Testimonial</a>
