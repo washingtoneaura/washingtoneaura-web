@@ -216,7 +216,7 @@
                         <img class="img-fluid rounded" src="img/project-9.jpg" alt="">
                         <a href="img/project-9.jpg" data-lightbox="project"><i class="fa fa-eye fa-2x"></i></a>
                     </div>
-                    <h6>UI / UX Design</h6>
+                    <h6>UI / UX Designs</h6>
                     <span>Digital agency website design and development</span>
                 </div>
                 <div class="project-item border rounded h-100 p-4" data-dot="10">
