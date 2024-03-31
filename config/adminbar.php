@@ -50,5 +50,6 @@ return array(
     'menus' => array(
         ['title'=>'Dashboard', 'path'=>'/admin'],
         ['title'=>'Add a page', 'path'=>'/admin/pages/create'],
+        //['title'=>'Sign out', 'path'=>route('platform.logout')],
         ),
 );

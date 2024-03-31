@@ -29,7 +29,7 @@
                 <span class="ms-3 text-dark">Explore the Documentation</span>
             </h3>
             <p class="ms-md-5 ps-md-1">
-                Ready to unleash your coding potential? Our platform built on the Laravel framework is user-friendly and
+                Ready to unleash your coding potential? My platform built on the Laravel framework is user-friendly and
                 perfect for developers of all levels to create innovative solutions. Dive in and experience the power of
                 limitless creativity with our comprehensive <a href="https://orchid.software/en/docs" target="_blank" class="text-u-l">documentation</a>.
             </p>
